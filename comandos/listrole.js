@@ -7,7 +7,7 @@ module.exports = {
     var server = message.guild;
     let id = message.guild.id;
   const embed = new Discord.RichEmbed()
-    .setColor( 0x763ebb)
+    .setColor(0xeab600)
     .setDescription(`${client.guilds.get(id).roles.map(r => r).join("\n ")}`)
     .setFooter('Lista de cargos') 
     .setAuthor(server.name, server.iconURL);

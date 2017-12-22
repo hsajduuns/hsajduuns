@@ -15,7 +15,7 @@ module.exports = {
 			.addField('Conta criada em', ` \`\`\`${user.createdAt.toDateString()}\`\`\` `, true)
 			.addField('Ingressou no servidor em', ` \`\`\`${message.member.joinedAt.toDateString()}\`\`\` `, true)
 			.addField('Roles', member.roles.map(roles => `${roles}`).join(', '))
-			.setColor(0xeab600});
+			.setColor(0xeab600);
         
 		message.channel.send({ embed });
     }

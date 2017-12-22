@@ -15,7 +15,7 @@ if (user) {
    const embed = new Discord.RichEmbed()
     .setDescription(' **:camera_with_flash:  Avatar de ' + user + `** \n **[Fazer Download!](${user.displayAvatarURL})**`)
     .setImage(user.displayAvatarURL)
-    .setColor(0x763ebb)
+    .setColor(0xeab600)
 message.channel.send({embed});
 
 } else {

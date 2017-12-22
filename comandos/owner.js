@@ -4,7 +4,7 @@ module.exports = {
     task(client, message) {
         message.channel.send({
 			embed: {
-				color: 0x763ebb,
+				color: 0xeab600,
 				description:` **Meus Criadores são:** \n \n @I3LACK PANTHER#3173, Dynatrii#4965 e Lord.Archangel#9647
 `,
 			}

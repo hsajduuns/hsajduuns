@@ -26,7 +26,7 @@ message.channel.send(':mag_right:  **Pesquisando...** ')
               googleData = querystring.parse(googleData.replace('/url?', ''));
               
               //resultado de busqueda
-              m.edit({embed: {description: `Resultados para **${suffix}** \n :satellite_orbital: ${googleData.q}`,color: 0x763ebb}});
+              m.edit({embed: {description: `Resultados para **${suffix}** \n :satellite_orbital: ${googleData.q}`,color: 0xeab600}});
         //Usamos nuestro bloque catch, Si no se encuentran resultados.
         }).catch((err) => {
               m.edit(':no_entry: Não há resultados encontrados!');

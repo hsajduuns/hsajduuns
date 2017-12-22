@@ -14,7 +14,7 @@ return message.channel.send(":x: Você não tem permissão para utilizar este co
   var rpts = ['https://cdn.dribbble.com/users/473527/screenshots/3443226/success.gif'];
   var link = rpts[Math.floor(Math.random() * rpts.length)]
 
-  var color = ["0x763ebb", "0xdd9220", "0x18e437","0x0b62f2", "0xfd0006","0xfb02cf","0xf06d0d"];
+  var color = ["0xeab600", "0xdd9220", "0x18e437","0x0b62f2", "0xfd0006","0xfb02cf","0xf06d0d"];
   var dime = color[Math.floor(Math.random() * color.length)]
 
 var guild = message.guild;
@@ -30,7 +30,7 @@ message.guild.createRole({
           .setTitle(":gear: Novo Cargo criado!")
           .setThumbnail(link)
           .setDescription(`:pencil: Cargo ${role} criado com sucesso!`)
-          .setColor(0x763ebb)
+          .setColor(0xeab600)
 
           message.channel.send({embed})
   

@@ -45,6 +45,6 @@ module.exports = {
 
 const embed = new Discord.RichEmbed()
     .setImage(memes[Math.floor(memes.length * Math.random())])
-    .setColor(0x763ebb)
+    .setColor(0xeab600)
 message.channel.send({embed});
 }};

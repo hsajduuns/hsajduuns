@@ -25,7 +25,7 @@ module.exports = {
 			.addField('Canais de Voz:', `\`\`\`${server.channels.filter(m => m.type === 'voice').size}\`\`\``, true)
 			.addField('Total roles do servidor', `\`\`\`${server.roles.size}\`\`\``)
 			.addField('Roles (Apresento apenas 15)', `${client.guilds.get(id).roles.map(r => r).slice(0, 15).join(" - ")}) `)
-			.setColor(0x763ebb);
+			.setColor(0xeab600);
     
 		message.channel.send({embed});
     }

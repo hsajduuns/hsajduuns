@@ -18,7 +18,7 @@ module.exports = {
                     value: ' :medal: **Nível:** ' + k.level + ' | ' + ' **Total de XP:** ' + k.points,
                     inline: !!k.inline ? k.inline : false
                 })).splice(0, 10),
-                color: 0x763ebb
+                color: 0xeab600
             }
         });
     }

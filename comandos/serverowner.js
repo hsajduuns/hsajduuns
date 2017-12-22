@@ -10,7 +10,7 @@ if (message.channel.type === "dm") return;
     const embed = new Discord.RichEmbed()
     .addField('• Propietário deste servidor:', server.owner.user+'#'+server.owner.user.discriminator+'', true)
     .setAuthor(server.name, server.iconURL)
-    .setColor(0x763ebb)
+    .setColor(0xeab600)
     
    message.channel.send({ embed });
 }}

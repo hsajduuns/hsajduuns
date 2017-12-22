@@ -19,7 +19,7 @@ module.exports = {
 		message.author.send({
 			embed: {
 				description: modArray.join('\n'),
-				color: 0x763ebb,
+				color: 0xeab600,
 			}
 		}).then(() => {
 			message.reply({embed: {description: `Comando **Help** Solicitado.\n\nVerifique suas mensagens diretas!`,color: 0x763ebb}});
@@ -27,24 +27,24 @@ module.exports = {
 			message.author.send({
 				embed: {
 					description: entreArray.join('\n'),
-					color: 0x763ebb,
+					color: 0xeab600,
 				}
 			}).then(() => {
 				message.author.send({
 					embed: {
 						description: socialArray.join('\n'),
-						color: 0x763ebb,
+						color: 0xeab600,
 					}
 				}).then(() => {
 				message.author.send({
 					embed: {
 						description: mediaArray.join('\n'),
-						color: 0x763ebb,
+						color: 0xeab600,
 					}
 				}).then(() => {
 					message.author.send({
 						embed: {
-							color: 0x763ebb,
+							color: 0xeab600,
 							description: ` 
 \`\`\`Expextre v.2 | By I3LACK PANTHER#3173, Dynatrii#4965 e Lord.Archangel#9647.\`\`\` 
 [Acessar meu site.]()`

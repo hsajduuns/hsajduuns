@@ -6,7 +6,7 @@ module.exports = {
     task(client, message) {
         message.channel.send({
 			embed: {
-				color: 0x763ebb,
+				color: 0xeab600,
 				description:`**Data:** ${new Date()}`,
 			}
 		});

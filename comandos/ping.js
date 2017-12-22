@@ -9,23 +9,28 @@ module.exports ={
         
 let ping = Math.floor(message.client.ping); 
 
-if (ping > 300) {
-    var embed = new Discord.RichEmbed().setDescription(":satellite: Pong! **" + ping + "ms.**")
-    .setColor(0x763ebb)
-    message.channel.sendEmbed(embed);
-    
-
-} else if (ping > 150) {
-    var embed = new Discord.RichEmbed().setDescription(":satellite: Pong! **" + ping + "ms.**")
-    .setColor(0x763ebb)
-    message.channel.sendEmbed(embed);
-
-
-} else {
-    var embed = new Discord.RichEmbed().setDescription(":satellite: Pong! **" + ping + "ms.**")
-    .setColor(0x763ebb)
-    message.channel.sendEmbed(embed);
-
-}}}
+if (ping > 150 ) {
+      var embed = new Discord.RichEmbed().setDescription("ðŸ“¡ Pong! **" + ping + "ms.** ")
+      .setColor(0xFFA500)
+      message.channel.send(embed);
+      
+  
+  } else if (ping > 100) {
+    var embed = new Discord.RichEmbed().setDescription("ðŸ“¡ Pong! **" + ping + "ms.**")
+    .setColor(0xFFD700)
+    message.channel.send(embed);
+} 
+  
+  else if (ping > 50) {
+      var embed = new Discord.RichEmbed().setDescription("ðŸ“¡ Pong! **" + ping + "ms.**")
+      .setColor(0xFFD700)
+      message.channel.send(embed);
+  
+  
+  } else {
+      var embed = new Discord.RichEmbed().setDescription("ðŸ“¡ Pong! **" + ping + "ms.**")
+      .setColor(0x00FF00)
+      message.channel.send(embed);
+  }}}
 
 

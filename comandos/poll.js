@@ -12,7 +12,7 @@ const embed = new Discord.RichEmbed()
       .setDescription(`\`\`\`${suffix}\`\`\``)
       .addField('`Voto 1`', `1\u20e3 Sim`, true)
       .addField('`Voto 2`', `2\u20e3 Não`, true)
-      .setColor(0x763ebb)
+      .setColor(0xeab600)
       .setTimestamp()
 
 message.channel.send({embed})
