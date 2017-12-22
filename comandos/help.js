@@ -22,7 +22,16 @@ module.exports = {
 				color: 0xeab600,
 			}
 		}).then(() => {
-			message.reply({embed: {description: `Comando **Help** Solicitado.\n\nVerifique suas mensagens diretas!`,color: 0xeab600}});
+			   var rpts = ['https://cdn.dribbble.com/users/784413/screenshots/3818347/mail.gif'];
+             var link = rpts[Math.floor(Math.random() * rpts.length)];
+          const embed = new Discord.RichEmbed() 
+
+          .setTitle("⚠ Help Solicitado!")
+          .setThumbnail(link)
+          .setDescription(`📩 Verifique sua mensagens diretas. `)
+          .setColor(0xeab600);
+
+          message.channel.send({embed});
 			message.react('🇧🇷').then
 			message.author.send({
 				embed: {
