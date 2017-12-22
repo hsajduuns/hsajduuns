@@ -22,7 +22,7 @@ module.exports = {
 				color: 0xeab600,
 			}
 		}).then(() => {
-			message.reply({embed: {description: `Comando **Help** Solicitado.\n\nVerifique suas mensagens diretas!`,color: 0x763ebb}});
+			message.reply({embed: {description: `Comando **Help** Solicitado.\n\nVerifique suas mensagens diretas!`,color: 0xeab600}});
 			message.react('🇧🇷').then
 			message.author.send({
 				embed: {
