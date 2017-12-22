@@ -1,0 +1,27 @@
+{
+  "name": "Sysop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adriano#3173",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.2.0",
+    "common-tags": "^1.5.1",
+    "ffmpeg-binaries": "^3.2.2-3",
+    "google-translate-api": "^2.3.0",
+    "googleapis": "^22.2.0",
+    "jimp": "^0.2.28",
+    "mongoose": "^4.13.5",
+    "node-opus": "^0.2.7",
+    "require-reload": "^0.2.2",
+    "youtube-info": "^1.1.2",
+    "ytdl-core": "^0.18.2",
+    "discord.js": "^11.2.1",
+    "imgur": "^0.2.1",
+    "discord-eco": "^0.0.10"
+  }
+}

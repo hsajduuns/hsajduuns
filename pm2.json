@@ -1,0 +1,9 @@
+{
+  "apps": [
+    {
+      "name": "Sysop",
+      "script": "index.js",
+      "args": "--color"
+    }
+  ]
+}
