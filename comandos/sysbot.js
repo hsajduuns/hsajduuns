@@ -17,6 +17,6 @@ module.exports = {
 .setTitle("Sua Pergunta: \n"+suffix)
 .addField("**Minha resposta:**", rpts[Math.floor(Math.random() * rpts.length)])
 .setDescription("▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔")
-.setColor(0x763ebb)
+.setColor(0xeab600)
 message.channel.send({embed})
 }}
