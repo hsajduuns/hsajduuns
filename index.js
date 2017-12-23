@@ -387,7 +387,7 @@ client.on('channelDelete', (channel, guild) => {
        timestamp: new Date(),
     footer: {
       icon_url: client.user.avatarURL,
-      text: "© Sysop | BOT 
+      text: "© Sysop | BOT"
     }
   }
         });
