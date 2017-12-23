@@ -6,6 +6,8 @@ module.exports = {
     description: `\`\`\`Calcule o seu amor ou de outros usuários\`\`\``,
     categoria: `Entretenimento`,
         task(client, message) {
+            
+           
 
 let userm = message.mentions.users.first()
   let userm2 = message.mentions.users.last()
@@ -26,9 +28,9 @@ let userm = message.mentions.users.first()
          
        let user =  message.mentions[0] || message.author;
        let p1  = Jimp.read(userm.avatarURL);
-       let p2  = Jimp.read('https://i.imgur.com/yavtAFw.png');
-       let p3 =   Jimp.loadFont(Jimp.FONT_SANS_32_WHITE);
-       let p4 =   Jimp.loadFont(Jimp.FONT_SANS_32_WHITE);
+       let p2  = Jimp.read('imagens/love-random2.png');
+       let p3 =   Jimp.loadFont(Jimp.FONT_SANS_64_WHITE);
+       let p4 =   Jimp.loadFont(Jimp.FONT_SANS_64_WHITE);
        let p5  =  Jimp.read("https://cloud.githubusercontent.com/assets/414918/11165709/051d10b0-8b0f-11e5-864a-20ef0bada8d6.png");
        let p6  =  Jimp.read("https://cloud.githubusercontent.com/assets/414918/11165709/051d10b0-8b0f-11e5-864a-20ef0bada8d6.png");
        let p7  = Jimp.read(userm2.avatarURL);
@@ -44,23 +46,23 @@ let userm = message.mentions.users.first()
              let mask2 = images[5];
          
        
-             mask.resize(120, 120);
-             img.resize(120, 120);
+             mask.resize(150, 150);
+             img.resize(150, 150);
              img.mask(mask, 0, 0);
-             mask2.resize(120, 120);
-             img2.resize(120, 120);
+             mask2.resize(150, 150);
+             img2.resize(150, 150);
              img2.mask(mask2, 0, 0);
-             lv.print(fuente, 195, 20, `${message.mentions.users.first().username.substring(0,5) + message.mentions.users.last().username.substring(message.mentions.users.last().username.length - 4,message.mentions.users.last().username.length)}`);
-             lv.print(fuente2, 217, 105, `${random}%`);
+             lv.print(fuente2, 190, 80, `${random}%`);
        
        
        
                              
-                       lv.composite(img, 43, 46).composite(img2, 361, 46).getBuffer(Jimp.MIME_PNG, (err, image) => {
+                       lv.composite(img, 33, 30).composite(img2, 331, 30).getBuffer(Jimp.MIME_PNG, (err, image) => {
                       
                              if (err) throw err;
-                              message.channel.send(`${message.author}`,new Discord.Attachment(image, 'love-random.png'));
-                       })
+                              message.channel.send(`${message.author} :heart: ${message.mentions.users.first().username.substring(0,5) + message.mentions.users.last().username.substring(message.mentions.users.last().username.length - 4,message.mentions.users.last().username.length)}`,new Discord.Attachment(image, 'love-random2.png'));
+                       });
        });
         }
 };
+
