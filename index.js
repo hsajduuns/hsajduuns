@@ -145,53 +145,258 @@ client.on('guildMemberRemove', member => {
 
 
 
-client.on('roleCreate', role => {
+client.on('roleCreate', (role, message) => {
     if (settings[role.guild.id] && settings[role.guild.id].logging)
-        role.guild.channels.get(settings[role.guild.id].logging).send({embed: {description: ` :gear: **Novas Roles** \n \n  ${role} - O cargo ${role.name} foi criado neste servidor. `, color: 0x763ebb}});
+        role.guild.channels.get(settings[role.guild.id].logging).send({embed: {
+	    color: 0xeab600,
+	    title: "Moderators LOG",
+	    url: "https://discordapp.com/",
+	    description: "mod-log Sysop BOT",
+	    fields: [{
+	    	 name: ":gear: Nova Role",
+        value: `Cargo ${role} criado no servidor.`
+      }
+    ],
+       timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© Sysop | BOT"
+    }
+  }
+});
 }); 
 
 client.on('roleDelete', role => {
     if (settings[role.guild.id] && settings[role.guild.id].logging)
-        role.guild.channels.get(settings[role.guild.id].logging).send({embed: {description: ` :wastebasket: **Roles Deletadas** \n \n  O cargo **${role.name}** foi deletado deste servidor. `, color: 0x763ebb}});
+        role.guild.channels.get(settings[role.guild.id].logging).send({embed: {
+	    color: 0xeab600,
+	    title: "Moderators LOG",
+	    url: "https://discordapp.com/",
+	    description: "mod-log Sysop BOT",
+	    fields: [{
+	    	 name: ":gear: Role Deletada",
+        value: `Cargo **${role.name}** deletada do servidor.`
+      }
+    ],
+       timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© Sysop | BOT"
+    }
+  }
+});
 });
 
 client.on('emojiCreate', emoji => {
     if (settings[emoji.guild.id] && settings[emoji.guild.id].logging)
-        emoji.guild.channels.get(settings[emoji.guild.id].logging).send({embed: {description: ` :gear: **Novos Emojis** \n \n Um novo emoji foi criado: ${emoji} `, color: 0x763ebb}});
+        emoji.guild.channels.get(settings[emoji.guild.id].logging).send({embed: {
+	    color: 0xeab600,
+	    title: "Moderators LOG",
+	    url: "https://discordapp.com/",
+	    description: "mod-log Sysop BOT",
+	    fields: [{
+	    	 name: ":gear: Novo emoji",
+        value: ` ${emoji}`
+      },
+      {
+      name: "Author",
+      value: `${client.user}`,
+    }],
+       timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© Sysop | BOT"
+    }
+  }
 });
+});
+
 
 client.on('emojiDelete', emoji => {
     if (settings[emoji.guild.id] && settings[emoji.guild.id].logging)
-        emoji.guild.channels.get(settings[emoji.guild.id].logging).send({embed: {description: ` :wastebasket: **Emoji Deletados** \n \n  Emoji ${emoji} deletado deste servidor. `, color: 0x763ebb}});
+        emoji.guild.channels.get(settings[emoji.guild.id].logging).send({embed: {
+	    color: 0xeab600,
+	    title: "Moderators LOG",
+	    url: "https://discordapp.com/",
+	    description: "mod-log Sysop BOT",
+	    fields: [{
+	    	 name: ":gear: Emoji Deletada",
+        value: ` ${emoji.name}`
+      },
+      {
+      name: "Author",
+      value: `${client.user}`,
+    }],
+       timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© Sysop | BOT"
+    }
+  }
+});
 });
 
 client.on('messageDelete', message => {
+	let user = message.mentions.users.size > 0 ? message.mentions.users.first() : message.author;
     if (settings[message.guild.id] && settings[message.guild.id].logging)
-        message.guild.channels.get(settings[message.guild.id].logging).send({embed: {description: ` :wastebasket: **Mensagens Deletadas** \n \n -------------------------------- \n ${message.author} teve sua mensagem deletada. \n -------------------------------- \n **Mensagem:**  \`\`\`${message.content}\`\`\` `, color: 0x763ebb}});
+        message.guild.channels.get(settings[message.guild.id].logging).send({embed: {
+	    color: 0xeab600,
+	    author: {
+      name: user.tag,
+      icon_url: user.avatarURL
+    },
+	    title: "Moderators LOG",
+	    url: "https://discordapp.com/",
+	    description: "mod-log Sysop BOT",
+	    fields: [{
+	    	 name: ":wastebasket: Mensagem deletada",
+        value: ` \`\`\`${message.content}\`\`\` `
+      },
+      {
+      name: "Author da mensagem",
+      value: `${user}`,
+    }],
+       timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© Sysop | BOT"
+    }
+  }
+        });
 });
+ 
 
-client.on('guildMemberAdd', (member) => {
+client.on('guildMemberAdd', (member, message) => {
     if (settings[member.guild.id] && settings[member.guild.id].logging)
-        member.guild.channels.get(settings[member.guild.id].logging).send({embed: {description: ` :inbox_tray: **Novo usuário** \n \n ${member} Entrou no servidor. `, color: 0x763ebb}});
+        member.guild.channels.get(settings[member.guild.id].logging).send({embed: {
+	    color: 0xeab600,
+	    author: {
+      name: client.user.tag,
+      icon_url: client.user.avatarURL
+    },
+	    title: "Moderators LOG",
+	    url: "https://discordapp.com/",
+	    description: "mod-log Sysop BOT",
+	    fields: [{
+	    	 name: "Novo usuário",
+        value: `${member} `
+      }],
+       timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© Sysop | BOT"
+    }
+  }
+        });
 });
-client.on('guildMemberRemove', (member, guild) => {
+client.on('guildMemberRemove', (member,members, message) => {
     if (settings[member.guild.id] && settings[member.guild.id].logging)
-        member.guild.channels.get(settings[member.guild.id].logging).send({embed: {description: ` :outbox_tray: **Usuário desconectado** \n \n ${member} deixou o servidor. `, color: 0x763ebb}});
+        member.guild.channels.get(settings[member.guild.id].logging).send({embed: {
+	    color: 0xeab600,
+	    author: {
+      name: client.user.tag,
+      icon_url: client.user.avatarURL
+    },
+	    title: "Moderators LOG",
+	    url: "https://discordapp.com/",
+	    description: "mod-log Sysop BOT",
+	    fields: [{
+	    	 name: "Usuário Desconectado",
+        value: ` ${member} deixou o servidor.`
+      }],
+       timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© Sysop | BOT"
+    }
+  }
+        });
 });
 
 client.on('guildBanAdd', (guild, user) => {
     if (settings[guild.id] && settings[guild.id].logging)
-        guild.channels.get(settings[guild.id].logging).send({embed: {description: ` :no_entry: **Membro banido** \n \n ${user} foi banido deste servidor.`, color: 0x763ebb}});
+        guild.channels.get(settings[guild.id].logging).send({embed: {
+	    color: 0xeab600,
+	    author: {
+      name: client.user.tag,
+      icon_url: client.user.avatarURL
+    },
+	    title: "Moderators LOG",
+	    url: "https://discordapp.com/",
+	    description: "mod-log Sysop BOT",
+	    fields: [{
+	    	 name: ":no_entry_sign:  Usuário Banido do servidor",
+        value: ` ${user} banido deste servidor.`
+      }],
+       timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© Sysop | BOT"
+    }
+  }
+        });
 });
 
-client.on('channelCreate', (channel) => {
+client.on('channelCreate', (channel, guild) => {
     if (!channel.guild) return; if (settings[channel.guild.id] && settings[channel.guild.id].logging)
-        channel.guild.channels.get(settings[channel.guild.id].logging).send({embed: {description: ` :gear: **Novo Canal** \n \n Canal ${channel} foi criado no servidor. `, color: 0x763ebb}});
+        channel.guild.channels.get(settings[channel.guild.id].logging).send({embed: {
+	    color: 0xeab600,
+	    author: {
+      name: client.user.tag,
+      icon_url: client.user.avatarURL
+    },
+	    title: "Moderators LOG",
+	    url: "https://discordapp.com/",
+	    description: "mod-log Sysop BOT",
+	    fields: [{
+	    	 name: ":white_check_mark: Novo canal",
+        value: ` Canal ${channel} criado no servidor.`
+	    },
+        {
+        name: "Author",
+      value: `${client.user}`,
+      }],
+       timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© Sysop | BOT"
+    }
+  }
+        });
 });
 
-client.on('channelDelete', (channel) => {
+client.on('channelDelete', (channel, guild) => {
     if (!channel.guild) return; if (settings[channel.guild.id] && settings[channel.guild.id].logging)
-        channel.guild.channels.get(settings[channel.guild.id].logging).send({embed: {description: ` :wastebasket: **Canal Deletado** \n \n Canal **${channel.name}** deletado do servidor. `, color: 0x763ebb}});
+        channel.guild.channels.get(settings[channel.guild.id].logging).send({embed: {
+	    color: 0xeab600,
+	    author: {
+      name: client.user.tag,
+      icon_url: client.user.avatarURL
+    },
+	    title: "Moderators LOG",
+	    url: "https://discordapp.com/",
+	    description: "mod-log Sysop BOT",
+	    fields: [{
+	    	 name: ":white_check_mark: Canal Deletado",
+        value: ` Canal ${channel.name} deletado do servidor`
+      },
+       {
+        name: "Author",
+      value: `${client.user}`,
+      }],
+       timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© Sysop | BOT 
+    }
+  }
+        });
 });
+
+
+client.on('guildCreate', (guild) => {
+guild.members.filter(member => member.hasPermission('MANAGE_GUILD') && member.user.send('Olá, obrigado por me adicionar em seu servidor, espero fazer muitas coisas boas ao seu lado e poder ajudar seu servidor.  \n Caso tenhas dúvidas ou interesse em ficar ligado em nossas atualizações, entre em nosso servidor Oficial: https://discord.gg/CGuyBJF'));
+});
+
 
 client.login(process.env.TOKEN);
