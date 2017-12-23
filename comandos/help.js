@@ -66,3 +66,6 @@ module.exports = {
 			if (e && e.code == 50007) 
 				message.reply("não posso enviar mensagem pra você :sob:");
 		});
+		
+			}
+};
