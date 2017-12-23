@@ -1,3 +1,4 @@
+const Discord = require("discord.js");
 let comandos = require('../utils/comandos.js');
 
 module.exports = {
@@ -22,9 +23,9 @@ module.exports = {
 				color: 0xeab600,
 			}
 		}).then(() => {
-			   var rpts = ['https://cdn.dribbble.com/users/784413/screenshots/3818347/mail.gif'];
+			 var rpts = ['https://i.imgur.com/j9u7Pbh.gif'];
              var link = rpts[Math.floor(Math.random() * rpts.length)];
-          const embed = new Discord.RichEmbed() 
+		  const embed = new Discord.RichEmbed() 
 
           .setTitle("⚠ Help Solicitado!")
           .setThumbnail(link)
@@ -32,6 +33,7 @@ module.exports = {
           .setColor(0xeab600);
 
           message.channel.send({embed});
+  
 			message.react('🇧🇷').then
 			message.author.send({
 				embed: {
@@ -51,12 +53,7 @@ module.exports = {
 						color: 0xeab600,
 					}
 				}).then(() => {
-					message.author.send({
-						embed: {
-							color: 0xeab600,
-							description: ` 
-\`\`\`Expextre v.2 | By I3LACK PANTHER#3173, Dynatrii#4965 e Lord.Archangel#9647.\`\`\` 
-[Acessar meu site.]()`
+				
 						}
 					});
 				});
