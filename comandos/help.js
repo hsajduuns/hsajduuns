@@ -53,7 +53,11 @@ module.exports = {
 						color: 0xeab600,
 					}
 				}).then(() => {
-				
+					message.author.send({
+						embed: {
+							color: 0xeab600,
+							description: ' Owners: `I3LACK PANTHER#3173` `Dynatrii#4965` `Lord.Archangel#9647`'
+						}
 					});
 				});
 			});
@@ -62,5 +66,3 @@ module.exports = {
 			if (e && e.code == 50007) 
 				message.reply("não posso enviar mensagem pra você :sob:");
 		});
-	}
-};
