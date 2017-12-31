@@ -46,7 +46,7 @@ client.on("ready", (message) => {
 client.user.setPresence({
         status: 'idle',
         game: {
-            name: config.prefix+`help | 🎄`
+            name: config.prefix+` 🌟 Feliz 2018 🌟`
         }
 });
 });
