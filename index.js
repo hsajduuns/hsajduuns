@@ -44,9 +44,9 @@ fs.readdir("./comandos/", (err, files) => {
 client.on("ready", (message) => {
    logger.logWithHeader('PRONTO', 'bgGreen', 'black',  `Online! S:${client.guilds.size} | U:${client.users.size}`);
 client.user.setPresence({
-        status: 'idle',
+        status: 'dnd',
         game: {
-            name: config.prefix+` 🌟 Feliz 2018 🌟`
+            name: config.prefix+`|Em Desenvovlimento`
         }
 });
 });
