@@ -3,7 +3,7 @@ module.exports = {
     categoria: 'Social',
     cooldown: 5,
     task(client, message, suffix) {
-        
+        if (!['244489368717230090','106915215592923136'].includes(message.author.id)) return message.reply("This command is not available to users.");
       const cheerio = require('cheerio'),
       snekfetch = require('snekfetch'),
       querystring = require('querystring');
@@ -26,7 +26,7 @@ message.channel.send(':mag_right:  **Pesquisando...** ')
               googleData = querystring.parse(googleData.replace('/url?', ''));
               
               //resultado de busqueda
-              m.edit({embed: {description: `Resultados para **${suffix}** \n :satellite_orbital: ${googleData.q}`,color: 0xeab600}});
+              m.edit(`Resultados para **${suffix}** \n :satellite_orbital: ${googleData.q}`);
         //Usamos nuestro bloque catch, Si no se encuentran resultados.
         }).catch((err) => {
               m.edit(':no_entry: Não há resultados encontrados!');
