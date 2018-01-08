@@ -46,7 +46,7 @@ client.on("ready", (message) => {
 client.user.setPresence({
         status: 'dnd',
         game: {
-            name: config.prefix+`|Em Desenvovlimento`
+            name: config.prefix+`help | Manutenção`
         }
 });
 });
