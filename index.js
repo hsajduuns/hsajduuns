@@ -39,14 +39,12 @@ fs.readdir("./comandos/", (err, files) => {
 	});
 });
 
-
-
 client.on("ready", (message) => {
    logger.logWithHeader('PRONTO', 'bgGreen', 'black',  `Online! S:${client.guilds.size} | U:${client.users.size}`);
 client.user.setPresence({
         status: 'dnd',
         game: {
-            name: config.prefix+`| Manutenção`,
+            name: config.prefix+'sy!!'`| Dev`,
             type: "WATCHING"
         }
 });
