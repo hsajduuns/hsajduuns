@@ -44,8 +44,7 @@ client.on("ready", (message) => {
 client.user.setPresence({
         status: 'dnd',
         game: {
-            name: config.prefix+'sy!!'`| Dev`,
-            type: "WATCHING"
+            name: config.prefix+'sy!!'`| Dev`
         }
 });
 });
